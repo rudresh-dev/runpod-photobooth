@@ -383,8 +383,8 @@ import axios from 'axios';
 // Call to generate an image
 export const generateImage = async (prompt) => {
   try {
-    const response = await axios.post('https://moderately-one-sunbeam.ngrok-free.app/generate-image', { prompt });
-    return `https://moderately-one-sunbeam.ngrok-free.app${response.data.image_url}`;
+    const response = await axios.post('https://king-prawn-app-js4z2.ondigitalocean.app/generate-image', { prompt });
+    return `https://king-prawn-app-js4z2.ondigitalocean.app${response.data.image_url}`;
   } catch (error) {
     console.error("Error generating image:", error.response ? error.response.data : error.message);
     return null;
@@ -394,7 +394,7 @@ export const generateImage = async (prompt) => {
 // Call to save webcam image
 export const saveWebcamImage = async (imageData) => {
   try {
-    const response = await axios.post('https://moderately-one-sunbeam.ngrok-free.app/save-webcam-image', {
+    const response = await axios.post('https://king-prawn-app-js4z2.ondigitalocean.app/save-webcam-image', {
       image_data: imageData
     });
     return response.data;
@@ -407,11 +407,11 @@ export const saveWebcamImage = async (imageData) => {
 // Call to perform face swap
 export const faceSwap = async (sourceImageUrl, targetImageUrl) => {
   try {
-    const response = await axios.post('https://moderately-one-sunbeam.ngrok-free.app/face-swap', {
+    const response = await axios.post('https://king-prawn-app-js4z2.ondigitalocean.app/face-swap', {
       source_image: sourceImageUrl,
       target_image: targetImageUrl
     });
-    return `https://moderately-one-sunbeam.ngrok-free.app/${response.data.image_url}`;
+    return `https://king-prawn-app-js4z2.ondigitalocean.app/${response.data.image_url}`;
   } catch (error) {
     console.error("Error performing face swap:", error.response ? error.response.data : error.message);
     return null;
