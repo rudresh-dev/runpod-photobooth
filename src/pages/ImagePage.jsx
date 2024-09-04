@@ -854,7 +854,7 @@ const ImagePage = () => {
     if (imageSrc) {
       const savedImage = await saveWebcamImage(imageSrc);
       if (savedImage && savedImage.image_url) {
-        setWebcamImageUrl(`https://1198-124-40-247-18.ngrok-free.app${savedImage.image_url}`);
+        setWebcamImageUrl(`https://moderately-one-sunbeam.ngrok-free.app${savedImage.image_url}`);
         setIsCaptured(true); // Set captured state to true
       } else {
         console.error('Failed to save webcam image');
