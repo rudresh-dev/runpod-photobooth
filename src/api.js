@@ -391,6 +391,20 @@ export const generateImage = async (prompt) => {
   }
 };
 
+// Call to save selected preset image to the backend
+export const savePresetImage = async (imageData) => {
+  try {
+    const response = await axios.post('https://king-prawn-app-js4z2.ondigitalocean.app/save-preset-image', {
+      image_data: imageData  // Send base64 image data
+    });
+    return response.data.image_url;
+  } catch (error) {
+    console.error('Error saving preset image:', error.response ? error.response.data : error.message);
+    return null;
+  }
+};
+
+
 // Call to save webcam image
 export const saveWebcamImage = async (imageData) => {
   try {
@@ -416,4 +430,5 @@ export const faceSwap = async (sourceImageUrl, targetImageUrl) => {
     console.error("Error performing face swap:", error.response ? error.response.data : error.message);
     return null;
   }
-};
+};                        
+                                   

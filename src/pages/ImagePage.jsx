@@ -838,6 +838,8 @@ import React, { useState, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Webcam from 'react-webcam';
 import { saveWebcamImage, faceSwap } from '../api';
+import { TbCapture } from "react-icons/tb";
+import { GrCaretNext } from "react-icons/gr";
 
 const ImagePage = () => {
   const location = useLocation();
@@ -877,15 +879,17 @@ const ImagePage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="w-screen h-screen bg-red-700">
       {/* Show the generated image */}
-      <div className='img-c-container'>
+      <div className='img-c-container hidden'>
         <img src={generatedImageUrl} alt="Generated" className="generated-image" />
       </div>
 
       {/* Conditionally show the webcam or the captured image */}
+      <div className='w-screen h-screen bg-blue-900'>
+
       {!isCaptured ? (
-        <div className='webcam-container'>
+        <div className='w-screen h-screen'>
           <Webcam
             audio={false}
             ref={webcamRef}
@@ -896,17 +900,19 @@ const ImagePage = () => {
             }}
             className="webcam"
           />
-          <button onClick={handleCapture}>Capture Webcam Image</button>
+          <button className='z-30 absolute bottom-14 left-[50vw]' onClick={handleCapture}><TbCapture size={100} color='white'/>
+          </button>
         </div>
       ) : (
-        <div>
-          <img src={webcamImageUrl} alt="Captured Webcam" className="captured-image" />
+        <div className='w-screen h-screen'>
+          <img className='w-full' src={webcamImageUrl} alt="Captured Webcam" />
         </div>
       )}
+      </div>
 
       {/* Face swap button, disabled during the face swap process */}
-      <button onClick={handleNext} disabled={!webcamImageUrl || isProcessing}>
-        {isProcessing ? 'Processing...' : 'Proceed to Face Swap'}
+      <button className='absolute bottom-8 right-[5vw]' onClick={handleNext} disabled={!webcamImageUrl || isProcessing}>
+        {isProcessing ? "proce" : <GrCaretNext  size={100} color='white'/>}
       </button>
     </div>
   );

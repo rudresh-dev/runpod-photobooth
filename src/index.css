@@ -1,8 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url('/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
 }
 .container {
   margin: 0 auto;
@@ -26,17 +36,10 @@ input {
   font-size: 18px;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+
 
 button:disabled {
-  background-color: #ccc;
+  background-color: #20194C;
   cursor: not-allowed;
 }
 
@@ -48,35 +51,21 @@ button:disabled {
   margin: 20px 0;
 }
 
-.webcam {
-  margin: 20px 0;
-}
 
 
 
-.img-c-container{
-  width: 300px;
-}
 
 
 .webcam-container{
   width: 70vw;
 }
 
-
-.webcam-container video{
-  width: 100%;
+video{
+  width: 100vw;
+  height: 100vh;
 }
 
 
 
-.btn-kk{
-  width: 200px;
-  background-color: brown;
-  padding: 8px 0px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 24px;
 
 
-}
