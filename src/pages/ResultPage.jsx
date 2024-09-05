@@ -284,15 +284,14 @@ const ResultPage = () => {
   const { swappedImageUrl } = location.state;
 
   return (
-    <div className="container">
-      <h1>Final Swapped Image</h1>
+    <div className="container"> 
       {swappedImageUrl ? (
         <img src={swappedImageUrl} alt="Swapped" className="swapped-image" />
       ) : (
         <p>Processing face swap...</p>
       )}
 
-<Link to='/'>Home</Link>
+    <Link className='btn-kk' to='/'>Home</Link>
     </div>
   );
 };

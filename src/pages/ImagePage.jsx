@@ -878,23 +878,19 @@ const ImagePage = () => {
 
   return (
     <div className="container">
-      <h1>Capture and Swap Faces</h1>
-
       {/* Show the generated image */}
-      <div>
-        <h3>Generated Image:</h3>
+      <div className='img-c-container'>
         <img src={generatedImageUrl} alt="Generated" className="generated-image" />
       </div>
 
       {/* Conditionally show the webcam or the captured image */}
       {!isCaptured ? (
-        <div>
+        <div className='webcam-container'>
           <Webcam
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
-            width={512}
-            height={512}
+            
             videoConstraints={{
               facingMode: 'user', // Use 'environment' for the back camera
             }}
@@ -904,7 +900,6 @@ const ImagePage = () => {
         </div>
       ) : (
         <div>
-          <h3>Captured Webcam Image:</h3>
           <img src={webcamImageUrl} alt="Captured Webcam" className="captured-image" />
         </div>
       )}
