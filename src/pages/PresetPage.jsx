@@ -10,6 +10,23 @@ const PresetPage = () => {
   const presetImages = [
     '/1.png',
     '/2.png',
+    '/3.png',
+    '/4.png',
+    '/5.png',
+    '/6.png',
+    '/7.png',
+    '/8.png',
+    '/9.png',
+    '/10.png',
+    '/11.png',
+    '/12.png',
+    '/13.png',
+    '/14.png',
+    '/15.png',
+    '/16.png',
+    '/17.jpg',
+    '/18.jpg',
+    '/19.jpg',
     // Add more preset image URLs as needed
   ];
 
@@ -49,22 +66,24 @@ const PresetPage = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Select a Preset Image</h1>
-      <div className="preset-images">
+    <div className="w-screen h-screen flex flex-col justify-center items-center gap-10 ">
+      
+      <div className="">
+        <div className='w-screen flex flex-wrap gap-6 justify-center h-[80dvh] relative overflow-y-auto'>
         {presetImages.map((imageUrl, index) => (
           <img
             key={index}
             src={imageUrl}
             alt={`Preset ${index + 1}`}
-            className={`preset-image ${selectedPresetImage === imageUrl ? 'selected' : ''}`}
+            className={`w-[200px] h-[200px] object-cover object-top ${selectedPresetImage === imageUrl ? 'selected' : ''}`}
             onClick={() => setSelectedPresetImage(imageUrl)}
-            style={{ cursor: 'pointer', border: selectedPresetImage === imageUrl ? '2px solid blue' : 'none' }}
+            style={{ cursor: 'pointer', border: selectedPresetImage === imageUrl ? '8px solid blue' : 'none' }}
           />
         ))}
+        </div>
       </div>
-      <button onClick={handleSavePreset} disabled={!selectedPresetImage || isSaving}>
-        {isSaving ? 'Saving...' : 'Save and Proceed'}
+      <button className='bg-none border-2 border-white px-16 py-4 rounded-2xl text-white text-3xl' onClick={handleSavePreset} disabled={!selectedPresetImage || isSaving}>
+        {isSaving ? 'Saving...' : 'Next'}
       </button>
     </div>
   );
