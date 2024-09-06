@@ -52,6 +52,13 @@ button:disabled {
 }
 
 
+.webcam{
+  height: 100vh;
+  /* background-color: red; */
+  object-fit: cover;
+  width: 100vw;
+}
+
 
 
 
@@ -60,10 +67,7 @@ button:disabled {
   width: 70vw;
 }
 
-video{
-  width: 100vw;
-  height: 100vh;
-}
+
 
 
 

@@ -190,7 +190,7 @@ const ImagePage = () => {
         </div>
       ) : (
         <div className='w-screen h-screen'>
-          <img className='' src={webcamImageUrl} alt="Captured Webcam" />
+          <img className='w-screen h-screen object-cover' src={webcamImageUrl} alt="Captured Webcam" />
         </div>
       )}
       </div>

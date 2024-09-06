@@ -23,7 +23,7 @@ const PromptPage = () => {
 
   return (
     <div className="w-screen h-screen relative  flex justify-center items-center">
-      <div className="w-[50vw] flex justify-center items-center  relative">
+      <div className="w-[50vw] flex justify-center items-center flex-col md:flex-row  relative">
 
      
       <div className=" w-[50vw] ">
@@ -32,12 +32,12 @@ const PromptPage = () => {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Enter image prompt"
-          className="h-full rounded-full py-8 pl-10 text-2xl border-none"
+          className="h-full md:rounded-full md:py-8 md:pl-10 md:text-2xl md:border-none"
         />
       </div>
-      <div className=" bg-[#423891] absolute rounded-full right-0 mr-1">
-        <button className="py-[26px] font-bold rounded-full text-white px-8 text-[24px]"    onClick={handleGenerateImage} disabled={isGenerating}>
-          {isGenerating ? "Generating Image..." : "Generate"}
+      <div className="bg-[#423891] md:absolute md:rounded-full md:right-0 md:mr-1">
+        <button className="py-3 px-8 md:py-[26px] font-bold rounded-full text-white md:px-8 md:text-[24px]"    onClick={handleGenerateImage} disabled={isGenerating}>
+          {isGenerating ? "Generating.." : "Generate"}
         </button>
       </div>
       </div>
