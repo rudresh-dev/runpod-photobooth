@@ -27,6 +27,7 @@ const PresetPage = () => {
     '/17.jpg',
     '/18.jpg',
     '/19.jpg',
+    '/20.jpg',
     // Add more preset image URLs as needed
   ];
 

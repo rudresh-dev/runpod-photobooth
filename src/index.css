@@ -36,8 +36,6 @@ input {
   font-size: 18px;
 }
 
-
-
 button:disabled {
   /* background-color: #20194C; */
   cursor: not-allowed;
@@ -50,7 +48,6 @@ button:disabled {
   height: auto;
   margin: 20px 0;
 }
-
 
 .webcam{
   height: 100vh;
