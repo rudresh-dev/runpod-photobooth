@@ -127,7 +127,7 @@ import { savePresetImage } from '../api';
 const PresetPage = () => {
   const [selectedPresetImage, setSelectedPresetImage] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
-  const [gender, setGender] = useState(2); // Default to male (2)
+  const [gender, setGender] = useState(1); // Default to male (2)
   const navigate = useNavigate();
 
   const presetImages = [
