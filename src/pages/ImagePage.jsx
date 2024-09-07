@@ -363,8 +363,7 @@ const ImagePage = () => {
       </div>
 
       {/* Gender Toggle */}
-      <div className="absolute bottom-32 flex justify-center w-screen items-center">
-        <label className="text-white mr-4">Select Gender:</label>
+      <div className="absolute bottom-3 flex justify-center w-screen items-center">
         <button
           className={`px-4 py-2 border rounded-lg ${gender === 2 ? "bg-blue-500" : "bg-gray-500"}`}
           onClick={() => setGender(2)}
