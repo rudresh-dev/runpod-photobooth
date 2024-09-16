@@ -5,7 +5,7 @@ import ImagePage from './pages/ImagePage';
 import ResultPage from './pages/ResultPage';
 import HomePage from './pages/HomePage';
 import PresetPage from './pages/PresetPage';
-
+import PresetPageC from './pages/PresetPageC';
 function App() {
   return (
     <Router>
@@ -15,6 +15,7 @@ function App() {
         <Route path="/preset" element={<PresetPage />} />
         <Route path="/image" element={<ImagePage />} />
         <Route path="/result" element={<ResultPage />} />
+        <Route path="/female" element={<PresetPageC />} />
       </Routes>
     </Router>
   );

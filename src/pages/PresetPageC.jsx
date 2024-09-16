@@ -111,29 +111,30 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { savePresetImage } from "../api";
 
-const PresetPage = () => {
+const PresetPageC = () => {
   const [selectedPresetImage, setSelectedPresetImage] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
   const [gender, setGender] = useState(0); // Default to male (2)
   const navigate = useNavigate();
 
   const presetImages = [
-    "./img004.jpg",
-    "./img005.jpg",
-    "./img006.jpg",
-    "/1.png",
-    "/2.png",
-    "/3.png",
-    "/4.png",
-    "/5.png",
-    "/6.png",
+    "./img001.jpg",
+    "./img002.jpg",
+    "./img003.jpg",
+
     "/7.png",
-    "/14.png",
-    "/15.png",
+    "/8.png",
+    "/9.png",
+    "/10.png",
+    "/11.png",
+    "/12.png",
+    "/13.png",
 
-    "/17.jpg",
+    "/16.png",
 
-    "/gg03.jpg",
+    "/18.jpg",
+    "/19.jpg",
+    "/20.jpg",
   ];
 
   // Function to convert an image URL to base64
@@ -198,7 +199,7 @@ const PresetPage = () => {
       </div>
 
       {/* Gender selection toggle */}
-      <div className=" hidden absolute bottom-[76px] left-48  justify-center w-screen items-center">
+      <div className="absolute bottom-[76px] left-48 flex justify-center w-screen items-center">
         {/* <label className="text-white mr-4"><label> */}
         <select
           className="text-black px-4 py-2 rounded-lg absolute "
@@ -222,4 +223,4 @@ const PresetPage = () => {
   );
 };
 
-export default PresetPage;
+export default PresetPageC;
