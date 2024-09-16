@@ -129,9 +129,7 @@ const PresetPage = () => {
     "/6.png",
     "/14.png",
     "/15.png",
-
     "/17.jpg",
-
     "/gg03.jpg",
   ];
 
