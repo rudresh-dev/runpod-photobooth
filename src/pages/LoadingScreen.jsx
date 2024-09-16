@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './LoadingScreen.css'; // Optional: Add CSS for loading screen if needed
 
 const LoadingScreen = () => {
