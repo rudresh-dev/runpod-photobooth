@@ -25,6 +25,10 @@ body{
   height: 100vh;
 }
 
+
+.container img{
+ width: 50%;
+}
 .container input{
   width: 250px;
 }

@@ -131,6 +131,12 @@ const PresetPage = () => {
   const navigate = useNavigate();
 
   const presetImages = [
+    "./img001.jpg",
+    "./img002.jpg",
+    "./img003.jpg",
+    "./img004.jpg",
+    "./img005.jpg",
+    "./img006.jpg",
     '/1.png',
     '/2.png',
     '/3.png',
@@ -151,6 +157,7 @@ const PresetPage = () => {
     '/18.jpg',
     '/19.jpg',
     '/20.jpg',
+    '/gg03.jpg',
   ];
 
   // Function to convert an image URL to base64
@@ -208,10 +215,10 @@ const PresetPage = () => {
       </div>
 
       {/* Gender selection toggle */}
-      <div className="absolute top-10 flex justify-center w-screen items-center">
-        <label className="text-white mr-4">Select Gender:</label>
+      <div className="absolute bottom-[76px] left-48 flex justify-center w-screen items-center">
+        {/* <label className="text-white mr-4"><label> */}
         <select
-          className="text-black px-4 py-2 rounded-lg"
+          className="text-black px-4 py-2 rounded-lg absolute "
           value={gender}
           onChange={(e) => setGender(Number(e.target.value))} // Update the gender state
         >

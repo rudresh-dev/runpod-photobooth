@@ -335,6 +335,7 @@ const ImagePage = () => {
           <div className="w-screen h-screen">
             <Webcam
               audio={false}
+              mirrored={true}
               ref={webcamRef}
               screenshotFormat="image/jpeg"
               screenshotWidth={720} // Set the width of the captured screenshot to 720 pixels
