@@ -282,7 +282,7 @@ const ImagePage = () => {
   const [webcamImageUrl, setWebcamImageUrl] = useState(null);
   const [isCaptured, setIsCaptured] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [gender, setGender] = useState(2); // Default gender as male (2)
+  const [gender, setGender] = useState(0); // Default gender as male (2)
   const navigate = useNavigate();
   const [showLoading, setShowLoading] = useState(false);
   const webcamRef = useRef(null);
