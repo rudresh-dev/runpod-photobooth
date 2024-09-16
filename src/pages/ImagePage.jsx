@@ -293,7 +293,7 @@ const ImagePage = () => {
       const savedImage = await saveWebcamImage(imageSrc);
       if (savedImage && savedImage.image_url) {
         setWebcamImageUrl(
-          `https://clownfish-app-oybm4.ondigitalocean.app${savedImage.image_url}`
+          `https://sea-turtle-app-5x9p8.ondigitalocean.app${savedImage.image_url}`
         );
         setIsCaptured(true);
       } else {
