@@ -199,7 +199,7 @@ const PresetPageC = () => {
       </div>
 
       {/* Gender selection toggle */}
-      <div className="absolute bottom-[76px] left-48 flex justify-center w-screen items-center">
+      <div className="absolute bottom-[76px] left-48 hidden justify-center w-screen items-center">
         {/* <label className="text-white mr-4"><label> */}
         <select
           className="text-black px-4 py-2 rounded-lg absolute "
