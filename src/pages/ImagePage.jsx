@@ -293,7 +293,7 @@ const ImagePage = () => {
       const savedImage = await saveWebcamImage(imageSrc);
       if (savedImage && savedImage.image_url) {
         setWebcamImageUrl(
-          `https://king-prawn-app-js4z2.ondigitalocean.app${savedImage.image_url}`
+          `https://clownfish-app-oybm4.ondigitalocean.app${savedImage.image_url}`
         );
         setIsCaptured(true);
       } else {
