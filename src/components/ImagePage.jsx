@@ -210,7 +210,7 @@ const ImagePage = () => {
                     "linear-gradient(95deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 53%, rgba(255,255,255,0.12) 100%)",
                 }}
               >
-                <img src="/public/came.svg" className="w-8" alt="Camera Icon" />
+                <img src="./came.svg" className="w-8" alt="Camera Icon" />
                 <p>CAPTURE</p>
               </button>
             </div>

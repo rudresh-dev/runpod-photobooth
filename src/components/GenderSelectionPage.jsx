@@ -21,8 +21,8 @@ const GenderSelectionPage = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center hv:gap-10">
-      <div className="bg-[url('./bar77.svg')] w-screen h-40 absolute top-0 bg-cover bg-bottom"></div>
-      <div className="bg-[url('./bar77.svg')] w-screen h-44 absolute bottom-0 bg-cover bg-top"></div>
+      <div className="bg-[url('/public/bar77.svg')] w-screen h-40 absolute top-0 bg-cover bg-bottom"></div>
+      <div className="bg-[url('/public/bar77.svg')] w-screen h-44 absolute bottom-0 bg-cover bg-top"></div>
       {/* <div className="bar-top"></div> */}
       <div className="absolute hidden top-[28vh] hv:top-[20vh] right-0  w-[87vw]">
         <img src="/public/lines22.svg" alt="" />
