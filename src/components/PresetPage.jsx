@@ -41,10 +41,6 @@ const PresetPage = () => {
 
 
   
-  useEffect(() => {
-    // Ensure the first image is selected when the component mounts
-    setSelectedPresetImageState(presetImages[0]);
-  }, [presetImages]);
 
 
   // Slider settings
