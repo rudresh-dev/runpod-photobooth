@@ -21,8 +21,8 @@ const GenderSelectionPage = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center hv:gap-10">
-      <div className="bg-[url('/public/bar77.svg')] w-screen h-40 absolute top-0 bg-cover bg-bottom"></div>
-      <div className="bg-[url('/public/bar77.svg')] w-screen h-44 absolute bottom-0 bg-cover bg-top"></div>
+      <div className="bg-[url('/public/bar77.svg')] w-screen h-[22dvh] absolute top-0 bg-cover bg-bottom"></div>
+      <div className="bg-[url('/public/bar77.svg')] w-screen h-[20dvh] absolute bottom-0 bg-cover bg-top"></div>
       {/* <div className="bar-top"></div> */}
       <div className="absolute hidden top-[28vh] hv:top-[20vh] right-0  w-[87vw]">
         <img src="/public/lines22.svg" alt="" />
@@ -37,10 +37,10 @@ const GenderSelectionPage = () => {
         className="w-48 top-10 absolute hv:top-20 hv:left-[35vw]"
         width={350}
       />
-      <div className="flex flex-col gap-6 hv:gap-10 items-center relative h-[65vh] justify-center">
-        <div className="absolute -bottom-1 hv:-bottom-16 -left-6 hv:-left-16 w-9">
+      <div className="flex flex-col gap-6 hv:gap-10 items-center relative h-[65vh] justify-center z-50">
+        {/* <div className="absolute -bottom-1 hv:-bottom-16 -left-6 hv:-left-16 w-9">
           <img src="/public/plus3.svg" alt="" />
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-5 hv:gap-10">
           <div>
@@ -94,7 +94,7 @@ const GenderSelectionPage = () => {
       </div> */}
 
         <button
-          className="bg-none border-solid border-[#ccc] border-[2.4px] hv:w-[670px]  w-[260px] py-[10px]  hv:py-[27px] hv:px-[58px] hv:rounded-3xl rounded-xl text-white text-2xl hv:text-6xl z-30"
+          className="bg-none border-solid border-[#ccc] border-[2.4px] hv:w-[670px]  w-[260px] py-[10px]  hv:py-[27px] hv:px-[58px] hv:rounded-3xl rounded-xl text-white text-2xl hv:text-6xl z-50"
           onClick={handleNext}
           disabled={!gender || !name || !email}
           style={{
