@@ -11,7 +11,7 @@ import { savePresetImage } from "../api";
 const PresetPage = () => {
   const { gender } = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const [selectedPresetImage, setSelectedPresetImageState] = useState(null);
+  const [selectedPresetImage, setSelectedPresetImageState] = useState(0);
   const [prompt, setPromptState] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const navigate = useNavigate();
@@ -117,14 +117,14 @@ const PresetPage = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center hv:gap-10">
-          <div className="bg-[url('./bar77.svg')] w-screen h-24 absolute top-0 bg-cover bg-bottom"></div>
-          <div className="bg-[url('./bar77.svg')] w-screen h-24 absolute bottom-0 bg-cover bg-top"></div>
-      {/* <img
+      <div className="bg-[url('/public/bar77.svg')] w-screen h-[18dvh] absolute top-0 bg-cover bg-bottom"></div>
+      <div className="bg-[url('/public/bar77.svg')] w-screen h-[18dvh] absolute bottom-0 bg-cover bg-top"></div>
+      <img
         src="/logocft11.png"
         alt=""
-        className="absolute top-10 left-[35vw] w-40"
+        className="absolute top-[7dvh] left-[35vw] w-32"
         // width={350}
-      /> */}
+      />
     
       <h1 className="text-[#FECC00] text-center font-bold hv:text-[68px] text-[34px] pb-5 hv:pb-11">
         SELECT YOUR <br /> CHARACTER
