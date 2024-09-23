@@ -117,14 +117,14 @@ const PresetPage = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center hv:gap-10">
-          <div className="bg-[url('./bar77.svg')] w-screen h-28 absolute top-0 bg-cover bg-bottom"></div>
-          <div className="bg-[url('./bar77.svg')] w-screen h-32 absolute bottom-0 bg-cover bg-top"></div>
-      <img
+          <div className="bg-[url('./bar77.svg')] w-screen h-24 absolute top-0 bg-cover bg-bottom"></div>
+          <div className="bg-[url('./bar77.svg')] w-screen h-24 absolute bottom-0 bg-cover bg-top"></div>
+      {/* <img
         src="/logocft11.png"
         alt=""
         className="absolute top-10 left-[35vw] w-40"
         // width={350}
-      />
+      /> */}
     
       <h1 className="text-[#FECC00] text-center font-bold hv:text-[68px] text-[34px] pb-5 hv:pb-11">
         SELECT YOUR <br /> CHARACTER
@@ -153,14 +153,14 @@ const PresetPage = () => {
       </Slider>
 
       <button
-        className=" mt-3 bg-none border-2 border-white px-7 py-2 hv:px-16 hv:py-4 rounded-lg hv:rounded-2xl text-white text-3xl hv:w-[670px] hv:h-[133px] hv:text-[60px] font-semibold"
+        className=" mt-3 bg-none border-2 border-white px-7 py-2 hv:px-16 hv:py-4 rounded-lg hv:rounded-2xl text-white text-3xl hv:w-[670px] hv:h-[133px] hv:text-[60px] font-semibold z-30"
         onClick={handleSavePreset}
         disabled={!selectedPresetImage || isSaving}
       >
         {isSaving ? "Saving..." : "Start Magic"}
       </button>
 
-      <div className="w-[200px] h-[50px] hidden hv:w-[460px] hv:h-[115px] absolute bottom-28">
+      {/* <div className="w-[200px] h-[50px] hidden hv:w-[460px] hv:h-[115px] absolute bottom-28 z-30">
         <input
           type="text"
           value={prompt}
@@ -168,7 +168,7 @@ const PresetPage = () => {
           placeholder="Enter prompt"
           className="w-[200px]  h-[50px] hv:w-[460px] hv:h-[115px] rounded-xl text-black hv:text-[48px] pl-6"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

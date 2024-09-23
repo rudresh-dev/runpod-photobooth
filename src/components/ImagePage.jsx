@@ -142,7 +142,7 @@ const ImagePage = () => {
     //             "linear-gradient(95deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 53%, rgba(255,255,255,0.12) 100%)",
     //           }}
     //           >
-                
+
     //           RETAKE
     //           </button>
     //         </div>
@@ -169,8 +169,9 @@ const ImagePage = () => {
     //   {showLoading && <LoadingScreen />}
     // </div>
     <div className="w-screen h-screen bg-red-700">
-    
-    <div className="absolute hidden top-[28vh] hv:top-[20vh] right-0  w-[87vw]">
+      {/* <div className="bg-[url('./bar77.svg')] w-screen h-28 absolute top-0 bg-cover bg-bottom"></div>
+      <div className="bg-[url('./bar77.svg')] w-screen h-32 absolute bottom-0 bg-cover bg-top"></div> */}
+      <div className="absolute hidden top-[28vh] hv:top-[20vh] right-0  w-[87vw]">
         <img src="/public/lines22.svg" alt="" />
       </div>
 
@@ -178,86 +179,85 @@ const ImagePage = () => {
         <img src="/public/lines11.svg" alt="" />
       </div>
 
-    <img
-      src="/logocft11.png"
-      alt="Logo"
-      className="hidden hv:block absolute top-20 left-[35vw]"
-      width={350}
-    />
-    <div className=" bg-[#000]">
-      {!isCaptured ? (
-        <div className="flex items-center justify-center h-screen w-screen">
-          <Webcam
-            audio={false}
-            mirrored={true}
-            ref={webcamRef}
-            screenshotFormat="image/jpeg"
-            screenshotWidth={720} 
-            videoConstraints={{
-              width: 720,
-              height: 720,
-              facingMode: "user",
-            }}
-            className="webcam"
-          />
-          <div className="z-30 absolute bottom-14 flex justify-center w-screen items-center">
-            <button
-              className="flex justify-center items-center gap-2 bg-none border-solid border-[#ccc] border-[2.4px] hv:w-[670px]  w-[200px] py-[8px] hv:py-[27px] hv:px-[58px] hv:rounded-3xl rounded-xl text-white text-2xl hv:text-6xl "
-              onClick={handleCapture}
-              style={{
-                background:
-                  "linear-gradient(95deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 53%, rgba(255,255,255,0.12) 100%)",
+      <img
+        src="/logocft11.png"
+        alt="Logo"
+        className="hidden hv:block absolute top-20 left-[35vw]"
+        width={350}
+      />
+      <div className=" bg-[#000]">
+        {!isCaptured ? (
+          <div className="flex items-center justify-center h-screen w-screen">
+            <Webcam
+              audio={false}
+              mirrored={true}
+              ref={webcamRef}
+              screenshotFormat="image/jpeg"
+              screenshotWidth={720}
+              videoConstraints={{
+                width: 720,
+                height: 720,
+                facingMode: "user",
               }}
-            >
-              <img src="/public/came.svg" className="w-8" alt="Camera Icon" />
-              <p>CAPTURE</p>
-            </button>
+              className="webcam"
+            />
+            <div className="z-30 absolute bottom-14 flex justify-center w-screen items-center">
+              <button
+                className="flex justify-center items-center gap-2 bg-none border-solid border-[#ccc] border-[2.4px] hv:w-[670px]  w-[200px] py-[8px] hv:py-[27px] hv:px-[58px] hv:rounded-3xl rounded-xl text-white text-2xl hv:text-6xl "
+                onClick={handleCapture}
+                style={{
+                  background:
+                    "linear-gradient(95deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 53%, rgba(255,255,255,0.12) 100%)",
+                }}
+              >
+                <img src="/public/came.svg" className="w-8" alt="Camera Icon" />
+                <p>CAPTURE</p>
+              </button>
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className="w-screen h-screen flex justify-center items-center">
-          <img
-            className="w-[736px] h-[932px] object-cover"
-            src={webcamImageUrl}
-            alt="Captured Webcam"
-          />
-          <div className="absolute bottom-28 flex justify-center w-screen items-center z-0">
-            <button
-              className="flex justify-center gap-6 border-solid border-[#ccc] bg-white text-black border-[2.4px] hv:w-[400px]  w-[260px] py-[10px]  hv:py-[27px] hv:px-[58px] hv:rounded-3xl rounded-xl font-bold text-2xl hv:text-6xl"
-              onClick={handleRetake}
-            >
-              RETAKE
-            </button>
+        ) : (
+          <div className="w-screen h-screen flex justify-center items-center">
+            <img
+              className="w-[736px] h-[932px] object-cover"
+              src={webcamImageUrl}
+              alt="Captured Webcam"
+            />
+            <div className="absolute bottom-28 flex justify-center w-screen items-center z-0">
+              <button
+                className="flex justify-center gap-6 border-solid border-[#ccc] bg-white text-black border-[2.4px] hv:w-[400px]  w-[260px] py-[10px]  hv:py-[27px] hv:px-[58px] hv:rounded-3xl rounded-xl font-bold text-2xl hv:text-6xl"
+                onClick={handleRetake}
+              >
+                RETAKE
+              </button>
+            </div>
           </div>
+        )}
+      </div>
+
+      {isCaptured && (
+        <div className="absolute bottom-12 flex justify-center w-screen items-center z-0">
+          <button
+            className="right-[50vw] flex justify-center gap-6 bg-none border-solid border-[#ccc] border-[2.4px] hv:w-[670px]  w-[260px] py-[10px]  hv:py-[27px] hv:px-[58px] hv:rounded-3xl rounded-xl text-white text-2xl hv:text-6xl"
+            onClick={handleNext}
+            disabled={isProcessing}
+            style={{
+              background:
+                "linear-gradient(95deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 53%, rgba(255,255,255,0.12) 100%)",
+            }}
+          >
+            {isProcessing ? (
+              // Show the LoadingScreen component when processing
+              <LoadingScreen />
+            ) : (
+              // Show the SiNextra icon when not processing
+              <p>CONTINUE</p>
+            )}
+          </button>
         </div>
       )}
+
+      {showLoading && <LoadingScreen />}
     </div>
-
-    {isCaptured && (
-      <div className="absolute bottom-12 flex justify-center w-screen items-center z-0"     
-     >
-        <button
-          className="right-[50vw] flex justify-center gap-6 bg-none border-solid border-[#ccc] border-[2.4px] hv:w-[670px]  w-[260px] py-[10px]  hv:py-[27px] hv:px-[58px] hv:rounded-3xl rounded-xl text-white text-2xl hv:text-6xl"
-          onClick={handleNext}
-          disabled={isProcessing}
-          style={{
-            background:
-              "linear-gradient(95deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 53%, rgba(255,255,255,0.12) 100%)",
-          }}
-        >
-          {isProcessing ? (
-            // Show the LoadingScreen component when processing
-            <LoadingScreen />
-          ) : (
-            // Show the SiNextra icon when not processing
-            <p>CONTINUE</p>
-          )}
-        </button>
-      </div>
-    )}
-
-    {showLoading && <LoadingScreen />}
-  </div>
   );
 };
 
