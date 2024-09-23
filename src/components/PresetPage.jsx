@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Slider from "react-slick";
@@ -15,6 +15,7 @@ const PresetPage = () => {
   const [prompt, setPromptState] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const navigate = useNavigate();
+
 
   const presetImagesMale = [
     "/1.png",
@@ -37,6 +38,14 @@ const PresetPage = () => {
     "/18.png",
   ];
   const presetImages = gender === 2 ? presetImagesMale : presetImagesFemale;
+
+
+  
+  useEffect(() => {
+    // Ensure the first image is selected when the component mounts
+    setSelectedPresetImageState(presetImages[0]);
+  }, [presetImages]);
+
 
   // Slider settings
   const settings = {
