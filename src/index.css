@@ -6,9 +6,10 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url('/bg.jpg');
+  /* background-image: url('/bg.jpg'); */
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #000;
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -32,13 +33,13 @@ body{
 .container input{
   width: 250px;
 }
-
+/* 
 input {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   font-size: 18px;
-}
+} */
 
 button:disabled {
   /* background-color: #20194C; */
@@ -57,7 +58,9 @@ button:disabled {
   height: 100vh;
   /* background-color: red; */
   object-fit: cover;
-  width: 100vw;
+  /* w-[763px] h-[932px] */
+  width: 763px;
+  height: 932px;
 }
 
 
@@ -71,6 +74,18 @@ button:disabled {
 
 
 
+.bar-top{
+  background-image: url('../bar77.svg');
 
+  position: absolute;
+  top: 0;
+  background-position: bottom;
 
+}
+.bar-bottom{
+  background-image: url('../bar77.svg');
 
+  position: absolute;
+  bottom: 0;
+  background-position: top;
+}
